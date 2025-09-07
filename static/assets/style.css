@@ -1,0 +1,184 @@
+@font-face {
+  font-family: "Beausite Grand";
+  src: url("./fonts/webfonts/BeausiteGrandWeb-Bold.woff2") format("woff2"),
+    url("./fonts/webfonts/BeausiteGrandWeb-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Beausite Slick";
+  src: url("./fonts/webfonts/BeausiteSlickWeb-Regular.woff2") format("woff2"),
+    url("./fonts/webfonts/BeausiteSlickWeb-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---------------------------------------------
+     Farbwelt mapped to CSS variables
+     Source: Elena Designcoach | Farbcodes (PDF)
+     Hexes used: #385469, #303b4a, #7a574f, #d19c59, #9ca6a8
+     --------------------------------------------- */
+:root {
+  /* Core UI tokens */
+  --bg: #ffffff; /* global background */
+  --fg: #303b4a; /* primary text (deep slate) */
+  --muted: #9ca6a8; /* secondary text (cool grey) */
+  --accent: #d19c59; /* primary accent (gold/ochre) */
+  --accent-2: #385469; /* secondary accent (steel blue) */
+  --surface: #ffffff; /* card/paper surface */
+
+  --maxw: 1120px; /* content width */
+  --radius: 16px;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+  /* Typography stacks */
+  --font-sans: "Beausite Slick", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  --font-display: "Beausite Grand", var(--font-sans);
+
+  /* Brand palette (direct from Farbcodes) */
+  --brand-blue: #385469; /* RGB 56,84,105 */
+  --brand-slate: #303b4a; /* RGB 49,58,73 */
+  --brand-brown: #7a574f; /* RGB 123,86,78 */
+  --brand-gold: #d19c59; /* RGB 209,156,89 */
+  --brand-grey: #9ca6a8; /* RGB 156,167,169 */
+}
+
+html {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3,
+.section-title,
+.brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--brand-slate);
+}
+
+/* Example utility classes using the palette */
+.text-muted {
+  color: var(--muted);
+}
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: var(--brand-brown);
+}
+
+/* Header & Navigation */
+.nav-item {
+  color: var(--accent-2);
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 8px 16px;
+}
+.nav-item:hover,
+.nav-item:focus,
+.nav-item:active {
+  color: var(--accent-2);
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: none;
+  border-bottom: 2px solid var(--accent-2);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 8px 16px;
+  background-color: var(--bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+/* Burger button */
+.burger {
+  display: none;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  position: fixed;
+  top: 10px;
+  right: 12px;
+  z-index: 110;
+}
+.burger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--brand-slate);
+  margin: 6px auto;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Mobile menu panel */
+.mobile {
+  display: none;
+  position: fixed;
+  top: 56px;
+  right: 12px;
+  left: 12px;
+  background: var(--bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 12px;
+}
+.mobile a {
+  display: block;
+  padding: 12px 8px;
+  color: var(--accent-2);
+  text-decoration: none;
+}
+.mobile a + a {
+  border-top: 1px solid #eee;
+}
+
+/* Responsive behavior */
+@media (max-width: 900px) {
+  .nav {
+    display: none;
+  }
+  .burger {
+    display: inline-block;
+  }
+}
+
+/*Hero*/
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  
+}
+.hero-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

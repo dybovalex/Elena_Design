@@ -1,0 +1,34 @@
+{
+	"files": [
+		{
+			"path": "static/assets/style.css",
+			"bookmarks": [
+				{
+					"line": 0,
+					"column": 0,
+					"label": "Font&Color"
+				},
+				{
+					"line": 49,
+					"column": 0,
+					"label": "Some elements"
+				},
+				{
+					"line": 65,
+					"column": 0,
+					"label": "Utility classes"
+				},
+				{
+					"line": 77,
+					"column": 0,
+					"label": "nav bar"
+				},
+				{
+					"line": 112,
+					"column": 0,
+					"label": "burger button"
+				}
+			]
+		}
+	]
+}
