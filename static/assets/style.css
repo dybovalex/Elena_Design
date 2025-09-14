@@ -69,6 +69,13 @@ h2 {
 figure {
   margin: 0;
 }
+p {
+  font-size: 1.2em;
+}
+
+ul {
+  font-size: 1.2em;
+}
 
 /* Example utility classes using the palette */
 .text-muted {
@@ -331,6 +338,8 @@ figure {
   height: 300px;
   border-radius: 10%;
   overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 8px 20px rgba(0, 0, 0, 0.4),
+    0 2px 6px rgba(0, 0, 0, 0.2);
 }
 .designcoach_img img {
   width: 300px;
@@ -398,6 +407,27 @@ figure {
   justify-content: center;
   margin-bottom: 50px;
   margin-top: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Centered, faded background emblem for Leistungen */
+.section#leistungen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../images/Elena-Designcoach-Haussymbol.png") no-repeat center
+    center;
+  background-size: 130dvh; /* scales image to 100% of viewport height */
+  background-attachment: fixed; /* optional: makes it stick while scrolling */
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.section#leistungen > * {
+  position: relative;
+  z-index: 1;
 }
 
 dl {
@@ -438,12 +468,120 @@ dd {
 #features-heading {
   text-align: left;
 }
-#benefits-heading {
+.benefits-heading {
   text-align: left;
+  color: var(--brand-gold);
 }
 .list {
   text-align: left;
 }
 .list--check {
   text-align: left;
+}
+
+.leistungen_h3 {
+  color: var(--brand-gold);
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 0px;
+  margin-top: 20px;
+  font-weight: 700;
+  font-family: var(--font-display);
+}
+
+.leistungen_h4 {
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-weight: 400;
+  font-family: var(--font-sans);
+}
+
+.list--check {
+  color: var(--brand-gold);
+}
+
+.meta-list {
+  font-size: 1.2em;
+}
+
+/* footer */
+
+.footer-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-wrapper img {
+  width: 15dvw;
+  object-fit: cover;
+}
+
+.footer-container {
+  max-width: 80%;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer_left {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.footer_middle {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer_right {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.footer_right a {
+  font-size: 1.2em;
+  text-decoration: none;
+  color: var(--brand-slate);
+  margin-bottom: auto auto;
+}
+.footer_right a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer_left {
+    width: 100%;
+  }
+  .footer_middle {
+    width: 100%;
+  }
+  .footer_right {
+    width: 100%;
+  }
+  .footer-wrapper {
+    width: 80%;
+  }
+  .footer-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }

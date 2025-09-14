@@ -14,24 +14,54 @@
 					"label": "Some elements"
 				},
 				{
-					"line": 72,
+					"line": 79,
 					"column": 0,
 					"label": "Utility classes"
 				},
 				{
-					"line": 92,
+					"line": 99,
 					"column": 0,
 					"label": "nav bar"
 				},
 				{
-					"line": 127,
+					"line": 134,
 					"column": 0,
 					"label": "burger button"
 				},
 				{
-					"line": 394,
+					"line": 401,
 					"column": 0,
 					"label": "Lestungen"
+				}
+			]
+		},
+		{
+			"path": "index.html",
+			"bookmarks": [
+				{
+					"line": 24,
+					"column": 0,
+					"label": "header"
+				},
+				{
+					"line": 58,
+					"column": 0,
+					"label": "hero"
+				},
+				{
+					"line": 120,
+					"column": 0,
+					"label": "In Touch"
+				},
+				{
+					"line": 194,
+					"column": 0,
+					"label": "Imago"
+				},
+				{
+					"line": 271,
+					"column": 0,
+					"label": "Finale"
 				}
 			]
 		}
