@@ -14,24 +14,29 @@
 					"label": "Some elements"
 				},
 				{
-					"line": 79,
+					"line": 80,
 					"column": 0,
 					"label": "Utility classes"
 				},
 				{
-					"line": 99,
+					"line": 100,
 					"column": 0,
 					"label": "nav bar"
 				},
 				{
-					"line": 134,
+					"line": 135,
 					"column": 0,
 					"label": "burger button"
 				},
 				{
-					"line": 401,
+					"line": 506,
 					"column": 0,
-					"label": "Lestungen"
+					"label": "Kontakt"
+				},
+				{
+					"line": 516,
+					"column": 0,
+					"label": "footer"
 				}
 			]
 		},
@@ -62,6 +67,11 @@
 					"line": 271,
 					"column": 0,
 					"label": "Finale"
+				},
+				{
+					"line": 373,
+					"column": 0,
+					"label": "Footer"
 				}
 			]
 		}
