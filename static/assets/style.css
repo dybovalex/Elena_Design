@@ -43,7 +43,7 @@
   --brand-slate: #303b4a; /* RGB 49,58,73 */
   --brand-brown: #7a574f; /* RGB 123,86,78 */
   --brand-gold: #d19c59; /* RGB 209,156,89 */
-  --brand-grey: #9ca6a8; /* RGB 156,167,169 */
+  --brand-grey: hsl(180, 5%, 91%); /* RGB 156,167,169 */
 }
 
 html {
@@ -569,6 +569,10 @@ dd {
 
 /* #kontakt */
 
+#kontakt {
+  background-color: var(--brand-grey);
+}
+
 #kontakt .two_column_wrapper {
   margin-top: 0;
 }
@@ -668,7 +672,7 @@ dd {
   height: 70%;
   margin-top: 100px;
   margin-bottom: 100px;
-  background-color: var(--muted);
+  background-color: var(--brand-grey);
   padding: 50px;
 }
 
