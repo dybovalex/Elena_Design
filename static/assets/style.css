@@ -60,7 +60,6 @@ h3,
   font-family: var(--font-display);
   font-weight: 700;
   color: var(--brand-slate);
-  text-align: center;
   margin-top: 50px;
 }
 h2 {
@@ -663,6 +662,10 @@ dd {
 
 /* Impressum */
 
+#Impressum {
+  background-color: var(--brand-grey);
+}
+
 #impressum_header {
   margin-top: 0 !important;
   margin-bottom: 100px !important;
@@ -672,7 +675,6 @@ dd {
   height: 70%;
   margin-top: 100px;
   margin-bottom: 100px;
-  background-color: var(--brand-grey);
   padding: 50px;
 }
 
@@ -724,4 +726,26 @@ hr {
   hr {
     margin: 18px auto;
   }
+}
+
+/* Datenschutz */
+
+
+#Datenschutz p {
+  text-align: left;
+  width: 100%;
+}
+
+#Datenschutz h3 {
+  text-align: left;
+}
+
+#Datenschutz h4 {
+  text-align: left;
+}
+
+#Datenschutz ol {
+  text-align: left;
+  font-size: 1.2em;
+  width: 100%;
 }

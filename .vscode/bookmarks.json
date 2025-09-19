@@ -14,37 +14,37 @@
 					"label": "Some elements"
 				},
 				{
-					"line": 102,
+					"line": 101,
 					"column": 0,
 					"label": "Utility classes"
 				},
 				{
-					"line": 122,
+					"line": 121,
 					"column": 0,
 					"label": "nav bar"
 				},
 				{
-					"line": 157,
+					"line": 156,
 					"column": 0,
 					"label": "burger button"
 				},
 				{
-					"line": 528,
+					"line": 527,
 					"column": 0,
 					"label": "Partner"
 				},
 				{
-					"line": 574,
+					"line": 573,
 					"column": 0,
 					"label": "Kontakt"
 				},
 				{
-					"line": 584,
+					"line": 583,
 					"column": 0,
 					"label": "footer"
 				},
 				{
-					"line": 663,
+					"line": 662,
 					"column": 0,
 					"label": "Impressum"
 				}
@@ -87,6 +87,16 @@
 					"line": 431,
 					"column": 0,
 					"label": "Footer"
+				}
+			]
+		},
+		{
+			"path": "Impressum.html",
+			"bookmarks": [
+				{
+					"line": 56,
+					"column": 0,
+					"label": "Impressum"
 				}
 			]
 		}
