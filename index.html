@@ -339,25 +339,26 @@
     <section class="section" id="galerie">
       <h2 class="section-title">Galerie</h2>
       <div class="container">
-        <div class="picture_wrapper">
-          <figure class="logo_format">
-            <img
-              src="./static/images/Galerie/1_Wohnraum.jpg"
-              alt="Foto Elena Desing Coach"
-            />
-          </figure>
-          <figure class="logo_format">
-            <img
-              src="./static/images/Galerie/2_Wohnraum.jpg"
-              alt="Foto Elena Desing Coach"
-            />
-          </figure>
-          <figure class="logo_format">
-            <img
-              src="./static/images/Galerie/3_Wohnraum.jpg"
-              alt="Foto Elena Desing Coach"
-            />
-          </figure>
+        <div class="carousel" aria-roledescription="carousel">
+          <button
+            class="carousel__arrow carousel__arrow--prev"
+            aria-label="Zurück"
+            data-dir="-1"
+          >
+            &#10094;
+          </button>
+          <div class="carousel__viewport">
+            <div class="carousel__track" id="galleryTrack">
+              <!-- Images injected by JS -->
+            </div>
+          </div>
+          <button
+            class="carousel__arrow carousel__arrow--next"
+            aria-label="Weiter"
+            data-dir="1"
+          >
+            &#10095;
+          </button>
         </div>
         <button class="button" id="button-partner">
           Alle Referenzen anzeigen

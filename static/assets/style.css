@@ -556,6 +556,70 @@ dd {
   width: 300px;
 }
 
+/* Galerie carousel */
+.carousel {
+  position: relative;
+  width: 100%;
+  margin: 16px 0 32px 0;
+}
+.carousel__viewport {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel__track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 32px) / 3);
+  gap: 16px;
+  transition: transform 500ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.carousel__item {
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: #eee;
+}
+.carousel__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.carousel__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(48, 59, 74, 0.85);
+  color: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  z-index: 5;
+}
+.carousel__arrow--prev {
+  left: -48px;
+}
+.carousel__arrow--next {
+  right: -48px;
+}
+
+@media (max-width: 900px) {
+  .carousel__track {
+    grid-auto-columns: 100%;
+  }
+  .carousel__arrow--prev {
+    left: -16px;
+  }
+  .carousel__arrow--next {
+    right: -16px;
+  }
+}
+
 @media (max-width: 900px) {
   .picture_wrapper {
     flex-direction: column;
