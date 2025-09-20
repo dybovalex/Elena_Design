@@ -29,24 +29,34 @@
 					"label": "burger button"
 				},
 				{
-					"line": 527,
+					"line": 537,
 					"column": 0,
 					"label": "Partner"
 				},
 				{
-					"line": 573,
+					"line": 583,
 					"column": 0,
 					"label": "Kontakt"
 				},
 				{
-					"line": 583,
+					"line": 593,
 					"column": 0,
 					"label": "footer"
 				},
 				{
-					"line": 662,
+					"line": 673,
 					"column": 0,
 					"label": "Impressum"
+				},
+				{
+					"line": 741,
+					"column": 0,
+					"label": "Datenschutz"
+				},
+				{
+					"line": 787,
+					"column": 0,
+					"label": "ABG"
 				}
 			]
 		},
@@ -79,6 +89,11 @@
 					"label": "Finale"
 				},
 				{
+					"line": 338,
+					"column": 0,
+					"label": "Galerie"
+				},
+				{
 					"line": 367,
 					"column": 0,
 					"label": "Partner"
@@ -94,7 +109,7 @@
 			"path": "Impressum.html",
 			"bookmarks": [
 				{
-					"line": 56,
+					"line": 57,
 					"column": 0,
 					"label": "Impressum"
 				}

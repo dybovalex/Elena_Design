@@ -186,6 +186,7 @@ ul {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 12px;
+  z-index: 120; /* above .burger (110) and .nav (100) */
 }
 .mobile a {
   display: block;
@@ -309,6 +310,15 @@ ul {
 
 #p_designcoach1 {
   font-size: 1.5em;
+}
+
+@media (max-width: 900px) {
+  .hero-wrapper img {
+    width: 70vw;
+    max-width: 360px;
+    height: auto;
+    object-fit: cover;
+  }
 }
 
 /* Designcoach two column wrapper */
@@ -600,6 +610,7 @@ dd {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .footer_left {
@@ -730,6 +741,10 @@ hr {
 
 /* Datenschutz */
 
+#Datenschutz {
+  background-color: var(--brand-grey);
+  margin-top: 50px;
+}
 
 #Datenschutz p {
   text-align: left;
@@ -748,4 +763,53 @@ hr {
   text-align: left;
   font-size: 1.2em;
   width: 100%;
+}
+
+.contact_datenschutz {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+  font-size: 1.2em;
+}
+
+#Firmenname_datenschutz {
+  margin: 0;
+}
+
+#adress_datenschutz {
+  margin: 0;
+}
+
+/* AGB */
+
+#AGB {
+  background-color: var(--brand-grey);
+  font-size: 1.2em;
+  margin-top: 50px;
+}
+
+#AGB ol {
+  list-style: none;
+  margin-top: 0;
+  padding: 0;
+  counter-reset: item;
+  font-size: 1.2rem;
+  text-align: left;
+}
+#AGB li {
+  display: block;
+  margin: 20px 0;
+}
+#AGB ol li::before {
+  content: counters(item, ".") ". ";
+  counter-increment: item;
+  font-weight: 600;
+}
+#AGB ol ol {
+  counter-reset: item; /* restart numbering within each nested list */
+  margin: 4px 0 0 0;
+  padding: 0;
 }
