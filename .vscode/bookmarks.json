@@ -29,34 +29,39 @@
 					"label": "burger button"
 				},
 				{
-					"line": 537,
+					"line": 541,
 					"column": 0,
 					"label": "Partner"
 				},
 				{
-					"line": 583,
+					"line": 587,
 					"column": 0,
 					"label": "Kontakt"
 				},
 				{
-					"line": 593,
+					"line": 597,
 					"column": 0,
 					"label": "footer"
 				},
 				{
-					"line": 673,
+					"line": 677,
 					"column": 0,
 					"label": "Impressum"
 				},
 				{
-					"line": 741,
+					"line": 745,
 					"column": 0,
 					"label": "Datenschutz"
 				},
 				{
-					"line": 787,
+					"line": 791,
 					"column": 0,
 					"label": "ABG"
+				},
+				{
+					"line": 884,
+					"column": 0,
+					"label": "Referenz-Galerie"
 				}
 			]
 		},

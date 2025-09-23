@@ -136,3 +136,72 @@ window.addEventListener("resize", () => {
   clampIndex();
   update();
 })();
+
+// Navigate to Referenz-Galerie from buttons
+document.querySelectorAll("#button-partner").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    window.location.href = "./Referenz-Galerie.html";
+  });
+});
+
+// Lightbox for Referenz-Galerie
+(() => {
+  const grid = document.querySelector(".galery-grid");
+  const overlay = document.getElementById("lightbox");
+  const imageEl = document.getElementById("lightboxImage");
+  const btnClose = document.getElementById("lightboxClose");
+  const btnPrev = document.getElementById("lightboxPrev");
+  const btnNext = document.getElementById("lightboxNext");
+  if (!grid || !overlay || !imageEl) return;
+
+  const thumbs = Array.from(grid.querySelectorAll("img"));
+  let currentIndex = 0;
+
+  const updateImage = () => {
+    const src = thumbs[currentIndex]?.getAttribute("src");
+    const alt = thumbs[currentIndex]?.getAttribute("alt") || "Großansicht";
+    if (src) {
+      imageEl.setAttribute("src", src);
+      imageEl.setAttribute("alt", alt);
+    }
+  };
+
+  const openAt = (index) => {
+    currentIndex = index;
+    updateImage();
+    overlay.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  };
+
+  const close = () => {
+    overlay.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  };
+
+  const step = (delta) => {
+    const len = thumbs.length;
+    currentIndex = (currentIndex + delta + len) % len;
+    updateImage();
+  };
+
+  thumbs.forEach((img, idx) => {
+    img.addEventListener("click", () => openAt(idx));
+  });
+
+  btnClose?.addEventListener("click", close);
+  btnPrev?.addEventListener("click", () => step(-1));
+  btnNext?.addEventListener("click", () => step(1));
+
+  // Click outside the image closes
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) close();
+  });
+
+  // Keyboard support
+  document.addEventListener("keydown", (e) => {
+    if (overlay.getAttribute("aria-hidden") === "true") return;
+    if (e.key === "Escape") close();
+    if (e.key === "ArrowLeft") step(-1);
+    if (e.key === "ArrowRight") step(1);
+  });
+})();

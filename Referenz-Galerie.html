@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Impressumg - Elena Designcoach</title>
+    <link
+      rel="icon"
+      type="image/jpeg"
+      href="./static/images/Elena-Designcoach-Haus_jpeg.jpg"
+    />
+    <link
+      rel="preload"
+      href="./static/assets/fonts/webfonts/BeausiteSlickWeb-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./static/assets/fonts/webfonts/BeausiteGrandWeb-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link rel="stylesheet" href="./static/assets/style.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <nav class="nav" aria-label="Hauptnavigation">
+          <a class="nav-item" href="./index.html#top">DESIGNCOACH</a>
+          <a class="nav-item" href="./index.html#leistungen">LEISTUNGEN</a>
+          <a class="nav-item" href="./index.html#galerie">GALERIE</a>
+          <a class="nav-item" href="./index.html#partner">PARTNER</a>
+          <a class="nav-item" href="./index.html#kontakt">KONTAKT</a>
+        </nav>
+        <button
+          class="burger"
+          aria-label="Menü öffnen"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div
+        id="mobileMenu"
+        class="mobile"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Mobiles Menü"
+      >
+        <a class="nav-item" href="./index.html#top">DESIGNCOACH</a>
+        <a class="nav-item" href="./index.html#leistungen">LEISTUNGEN</a>
+        <a class="nav-item" href="./index.html#galerie">GALERIE</a>
+        <a class="nav-item" href="./index.html#partner">PARTNER</a>
+        <a class="nav-item" href="./index.html#kontakt">KONTAKT</a>
+      </div>
+    </header>
+
+    <section class="section" id="Referenz-Galerie">
+      <div class="container">
+        <h2 class="section-title">Galerie</h2>
+        <div class="galery-grid">
+          <img src="./static/images/Galerie/1_Wohnraum.jpg" alt="" />
+          <img src="./static/images/Galerie/2_Wohnraum.jpg" alt="" />
+          <img src="./static/images/Galerie/3_Wohnraum.jpg" alt="" />
+          <img src="./static/images/Galerie/4a_Wohnraum.jpg" alt="" />
+          <img src="./static/images/Galerie/6_Kueche.jpg" alt="" />
+          <img src="./static/images/Galerie/8_Kueche.jpg" alt="" />
+          <img src="./static/images/Galerie/11_Kleiderschrank.jpg" alt="" />
+          <img src="./static/images/Galerie/17_Einfamilienhaus.jpg" alt="" />
+          <img src="./static/images/Galerie/20_Einfamilienhaus.jpg" alt="" />
+          <img src="./static/images/Galerie/21_Einfamilienhaus.jpg" alt="" />
+          <img src="./static/images/Galerie/24_Haus.jpg" alt="" />
+          <img src="./static/images/Galerie/35_ED0035.jpg" alt="" />
+          <img src="./static/images/Galerie/54_ED0054.jpg" alt="" />
+          <img src="./static/images/Galerie/58_ED0058 c.jpg" alt="" />
+          <img src="./static/images/Galerie/59_ED0059 a.jpg" alt="" />
+          <img src="./static/images/Galerie/59_ED0059 c.jpg" alt="" />
+          <img src="./static/images/Galerie/62_ED0062.jpg" alt="" />
+          <img src="./static/images/Galerie/67_ED0067 e.jpg" alt="" />
+          <img src="./static/images/Galerie/69_ED0069 b.jpg" alt="" />
+          <img src="./static/images/Galerie/70_ED0070 e.jpg" alt="" />
+          <img src="./static/images/Galerie/75_ED0075.jpg" alt="" />
+          <img src="./static/images/Galerie/91_ED0091.jpg" alt="" />
+          <img src="./static/images/Galerie/96_ED0096.jpg" alt="" />
+          <img src="./static/images/Galerie/97_ED0097.jpg" alt="" />
+          <img src="./static/images/Galerie/104_ED00104 a.jpg" alt="" />
+          <img src="./static/images/Galerie/110_ED00110.jpg" alt="" />
+          <img src="./static/images/Galerie/115_ED00115 b.jpg" alt="" />
+          <img src="./static/images/Galerie/118_ED00118 a.jpg" alt="" />
+          <img src="./static/images/Galerie/137_ED0137.jpg" alt="" />
+          <img src="./static/images/Galerie/139_ED0139.jpg" alt="" />
+          <img src="./static/images/Galerie/160_ED0160.jpg" alt="" />
+          <img src="./static/images/Galerie/166_ED0166c.jpg" alt="" />
+        </div>
+        <!-- Lightbox overlay -->
+        <div
+          class="lightbox"
+          id="lightbox"
+          aria-hidden="true"
+          role="dialog"
+          aria-label="Bildanzeige"
+        >
+          <button
+            class="lightbox__close"
+            id="lightboxClose"
+            aria-label="Schließen"
+          >
+            <img src="./static/images/Icons/close.svg" />
+          </button>
+          <button
+            class="lightbox__arrow lightbox__arrow--prev"
+            id="lightboxPrev"
+            aria-label="Vorheriges Bild"
+          >
+            <img src="./static/images/Icons/arrow_back.svg" />
+          </button>
+          <figure class="lightbox__figure">
+            <img id="lightboxImage" alt="Großansicht" />
+          </figure>
+          <button
+            class="lightbox__arrow lightbox__arrow--next"
+            id="lightboxNext"
+            aria-label="Nächstes Bild"
+          >
+            <img src="./static/images/Icons/arrow_forward.svg" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="section">
+      <div class="footer-container">
+        <div class="footer_left">
+          <h3>Dr. Elena Sizova</h3>
+          <p class="kontakt">
+            Alois Grundner-Straße 15a <br />
+            8073 Seiersberg‑Pirka · Österreich<br />
+            Tel.: +43 660 123 8000 <br />
+            <a href="mailto:info@elena-designcoach.at"
+              >info@elena-designcoach.at</a
+            >
+          </p>
+        </div>
+
+        <div class="footer_middle">
+          <figure class="footer-wrapper">
+            <img src="./static/images/Elena-Designcoach-Logo_png.png" alt="" />
+          </figure>
+        </div>
+
+        <div class="footer_right">
+          <a href="./Impressum.html">Impressum</a><br />
+          <a href="./Datenschutz.html">Datenschutzerklärung</a><br />
+          <a href="./AGB.html">AGB</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./static/assets/script.js"></script>
+  </body>
+</html>
