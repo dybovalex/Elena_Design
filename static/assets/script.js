@@ -138,9 +138,16 @@ window.addEventListener("resize", () => {
 })();
 
 // Navigate to Referenz-Galerie from buttons
-document.querySelectorAll("#button-partner").forEach((btn) => {
+document.querySelectorAll("#button-galerie").forEach((btn) => {
   btn.addEventListener("click", () => {
     window.location.href = "./Referenz-Galerie.html";
+  });
+});
+
+// Navigate to Partner from buttons
+document.querySelectorAll("#button-partner").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    window.location.href = "./Partner.html";
   });
 });
 
