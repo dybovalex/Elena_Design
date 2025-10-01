@@ -19,57 +19,67 @@
 					"label": "Utility classes"
 				},
 				{
-					"line": 121,
+					"line": 131,
 					"column": 0,
 					"label": "nav bar"
 				},
 				{
-					"line": 156,
+					"line": 166,
 					"column": 0,
 					"label": "burger button"
 				},
 				{
-					"line": 541,
+					"line": 247,
+					"column": 0,
+					"label": "Hero"
+				},
+				{
+					"line": 275,
+					"column": 0,
+					"label": "Section: design coach"
+				},
+				{
+					"line": 527,
 					"column": 0,
 					"label": "Partner"
 				},
 				{
-					"line": 582,
+					"line": 597,
 					"column": 0,
 					"label": "Galerie carousel"
 				},
 				{
-					"line": 607,
+					"line": 622,
 					"column": 0,
 					"label": "Kontakt"
 				},
 				{
-					"line": 617,
+					"line": 632,
 					"column": 0,
 					"label": "footer"
 				},
 				{
-					"line": 677,
+					"line": 692,
 					"column": 0,
 					"label": "Impressum"
 				},
 				{
-					"line": 745,
+					"line": 760,
 					"column": 0,
 					"label": "Datenschutz"
 				},
 				{
-					"line": 791,
+					"line": 806,
 					"column": 0,
 					"label": "ABG"
 				},
 				{
-					"line": 884,
+					"line": 899,
 					"column": 0,
 					"label": "Referenz-Galerie"
 				},
 				{
-					"line": 1013,
+					"line": 1028,
 					"column": 0,
 					"label": "Partner"
 				}
@@ -84,37 +94,37 @@
 					"label": "header"
 				},
 				{
-					"line": 63,
+					"line": 65,
 					"column": 0,
 					"label": "hero"
 				},
 				{
-					"line": 125,
+					"line": 127,
 					"column": 0,
 					"label": "In Touch"
 				},
 				{
-					"line": 199,
+					"line": 201,
 					"column": 0,
 					"label": "Imago"
 				},
 				{
-					"line": 276,
+					"line": 278,
 					"column": 0,
 					"label": "Finale"
 				},
 				{
-					"line": 343,
+					"line": 345,
 					"column": 0,
 					"label": "Galerie"
 				},
 				{
-					"line": 373,
+					"line": 375,
 					"column": 0,
 					"label": "Partner"
 				},
 				{
-					"line": 455,
+					"line": 459,
 					"column": 0,
 					"label": "Footer"
 				}

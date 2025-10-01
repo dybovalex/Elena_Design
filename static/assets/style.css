@@ -23,7 +23,7 @@
 :root {
   /* Core UI tokens */
   --bg: #ffffff; /* global background */
-  --fg: #303b4a; /* primary text (deep slate) */
+  --fg: #40586d; /* primary text (deep slate)  #303b4a - former color: #40586d */
   --muted: #9ca6a8; /* secondary text (cool grey) */
   --accent: #d19c59; /* primary accent (gold/ochre) */
   --accent-2: #385469; /* secondary accent (steel blue) */
@@ -40,7 +40,7 @@
 
   /* Brand palette (direct from Farbcodes) */
   --brand-blue: #385469; /* RGB 56,84,105 */
-  --brand-slate: #303b4a; /* RGB 49,58,73 */
+  --brand-slate: #40586d; /* RGB 49,58,73 */
   --brand-brown: #7a574f; /* RGB 123,86,78 */
   --brand-gold: #d19c59; /* RGB 209,156,89 */
   --brand-grey: hsl(180, 5%, 91%); /* RGB 156,167,169 */
@@ -110,6 +110,16 @@ ul {
 .btn-primary:hover {
   background: var(--brand-brown);
 }
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
 .container {
   width: 80%;
   display: flex;
@@ -211,11 +221,11 @@ ul {
     width: 100%;
   }
 
-  /* Stack image above text in design coach section */
-  .two_column_wrapper {
+  /* Section: Designcoach */
+  .wrapper_design_coach {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     gap: 24px;
     margin-top: 48px;
   }
@@ -232,28 +242,6 @@ ul {
   .column_wrapper_text {
     align-items: flex-start;
     justify-content: flex-start;
-  }
-
-  /* Leistungen section: mirror design_coach behavior */
-  .section .two_column_wrapper {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
-  }
-  .section .column_wrapper_left,
-  .section .column_wrapper_right {
-    width: 100%;
-    margin: 0;
-    padding: 0 16px;
-  }
-  .section .column_wrapper_left {
-    height: auto;
-    order: -1;
-  }
-  /* Ensure left column stacks above right on mobile */
-  .section .column_wrapper_right {
-    order: 0;
   }
 }
 
@@ -285,7 +273,7 @@ ul {
   margin-bottom: 50px;
 }
 
-/* Design coach */
+/* Section: Design coach */
 #design_coach {
   background-color: var(--brand-slate);
   color: var(--bg);
@@ -313,7 +301,22 @@ ul {
 }
 
 #p_designcoach1 {
-  font-size: 1.5em;
+  font-size: 1.2em;
+}
+
+/* Designcoach wrapper container */
+.wrapper_design_coach {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+  margin-top: 48px;
+}
+
+@media (max-width: 900px) {
+  .wrapper_design_coach {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 900px) {
@@ -330,7 +333,7 @@ ul {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  align-items: flex-start;
   margin-top: 100px;
 }
 .column_wrapper_img {
@@ -355,6 +358,7 @@ ul {
 }
 .column_wrapper_text p {
   text-align: left !important;
+  margin-top: 0 !important;
 }
 
 /* Designcoach image container (shared class; per-instance via id) */
@@ -435,15 +439,6 @@ ul {
 
 /* Leistungen */
 
-.section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-
 /* Centered, faded background emblem for Leistungen */
 .section#leistungen::before {
   content: "";
@@ -484,8 +479,8 @@ dd {
   align-items: start;
   justify-content: flex-start;
   height: 100%;
-  padding-left: 200px;
-  padding-right: 100px;
+  padding-left: 10dvw;
+  padding-right: 50px;
 }
 .column_wrapper_right {
   width: 50%;
@@ -494,8 +489,8 @@ dd {
   align-items: start;
   justify-content: flex-start;
   height: 100%;
-  padding-right: 200px;
-  padding-left: 100px;
+  padding-right: 10dvw;
+  padding-left: 50px;
 }
 
 #features-heading {
@@ -537,6 +532,35 @@ dd {
 
 .meta-list {
   font-size: 1.2em;
+}
+
+@media (max-width: 900px) {
+  /* Leistungen section: mirror design_coach behavior */
+
+  .section .container {
+    width: 90%;
+  }
+
+  .section .two_column_wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+  .section .column_wrapper_left,
+  .section .column_wrapper_right {
+    width: 100%;
+    margin: 0;
+    padding: 0 16px;
+  }
+  .section .column_wrapper_left {
+    height: auto;
+    order: -1;
+  }
+  /* Ensure left column stacks above right on mobile */
+  .section .column_wrapper_right {
+    order: 0;
+  }
 }
 
 /* Partner */
