@@ -317,6 +317,10 @@ ul {
   .wrapper_design_coach {
     flex-direction: column;
   }
+
+  #design_coach p {
+    width: 90%;
+  }
 }
 
 @media (max-width: 900px) {
@@ -692,6 +696,12 @@ dd {
   width: 75%;
 }
 
+@media (max-width: 900px) {
+  #kontakt p {
+    width: 90%;
+  }
+}
+
 /* footer */
 
 .footer-wrapper {
@@ -720,7 +730,7 @@ dd {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: space-between;
 }
 .footer_middle {
   width: 30%;
@@ -733,19 +743,60 @@ dd {
 .footer_right {
   width: 30%;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .footer_right a {
   font-size: 1.2em;
-  text-decoration: none;
   color: var(--brand-slate);
   margin-bottom: auto auto;
 }
 .footer_right a:hover {
   text-decoration: underline;
+}
+
+.icon_social_media {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--brand-slate);
+  padding: 10px;
+  border-radius: 10%;
+  margin-right: 10px;
+}
+
+#Kontakt_Data {
+  margin-top: 0;
+}
+
+.soc_media_icon_wrapper a:hover {
+  cursor: pointer;
+}
+
+#logo_geschwinden_wrapper {
+  margin-right: 20px;
+  width: 120px;
+}
+
+#logo_geschwinden {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#link_footer_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  .footer_right {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 900px) {
@@ -756,11 +807,15 @@ dd {
   }
   .footer_left {
     width: 100%;
+    margin-bottom: 20px;
   }
   .footer_middle {
     width: 100%;
+    margin-bottom: 20px;
   }
   .footer_right {
+    display: flex;
+    flex-direction: row;
     width: 100%;
   }
   .footer-wrapper {

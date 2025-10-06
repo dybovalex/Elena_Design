@@ -39,47 +39,37 @@
 					"label": "Section: design coach"
 				},
 				{
-					"line": 527,
+					"line": 531,
 					"column": 0,
 					"label": "Partner"
 				},
 				{
-					"line": 597,
+					"line": 601,
 					"column": 0,
 					"label": "Galerie carousel"
 				},
 				{
-					"line": 622,
-					"column": 0,
-					"label": "Kontakt"
-				},
-				{
-					"line": 632,
+					"line": 704,
 					"column": 0,
 					"label": "footer"
 				},
 				{
-					"line": 692,
+					"line": 830,
 					"column": 0,
-					"label": "Impressum"
+					"label": "impressum"
 				},
 				{
-					"line": 760,
-					"column": 0,
-					"label": "Datenschutz"
-				},
-				{
-					"line": 806,
+					"line": 861,
 					"column": 0,
 					"label": "ABG"
 				},
 				{
-					"line": 899,
+					"line": 954,
 					"column": 0,
 					"label": "Referenz-Galerie"
 				},
 				{
-					"line": 1028,
+					"line": 1083,
 					"column": 0,
 					"label": "Partner"
 				}
@@ -134,7 +124,7 @@
 			"path": "Impressum.html",
 			"bookmarks": [
 				{
-					"line": 57,
+					"line": 56,
 					"column": 0,
 					"label": "Impressum"
 				}
