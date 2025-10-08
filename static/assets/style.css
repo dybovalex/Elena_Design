@@ -23,7 +23,11 @@
 :root {
   /* Core UI tokens */
   --bg: #ffffff; /* global background */
-  --fg: #40586d; /* primary text (deep slate)  #303b4a - former color: #40586d */
+  --fg: rgb(
+    64,
+    88,
+    109
+  ); /* primary text (deep slate)  #303b4a - former color: #40586d */
   --muted: #9ca6a8; /* secondary text (cool grey) */
   --accent: #d19c59; /* primary accent (gold/ochre) */
   --accent-2: #385469; /* secondary accent (steel blue) */
@@ -752,9 +756,11 @@ dd {
   font-size: 1.2em;
   color: var(--brand-slate);
   margin-bottom: auto auto;
-}
-.footer_right a:hover {
   text-decoration: underline;
+}
+
+.soc_media_icon_wrapper a {
+  text-decoration: none;
 }
 
 .icon_social_media {
@@ -866,7 +872,7 @@ address {
   margin: 10px 0;
 }
 
-a {
+#Impressum a {
   text-decoration: underline;
 }
 
