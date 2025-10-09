@@ -79,42 +79,32 @@
 			"path": "index.html",
 			"bookmarks": [
 				{
-					"line": 29,
-					"column": 0,
-					"label": "header"
-				},
-				{
-					"line": 65,
+					"line": 36,
 					"column": 0,
 					"label": "hero"
 				},
 				{
-					"line": 127,
-					"column": 0,
-					"label": "In Touch"
-				},
-				{
-					"line": 201,
+					"line": 179,
 					"column": 0,
 					"label": "Imago"
 				},
 				{
-					"line": 278,
+					"line": 260,
 					"column": 0,
 					"label": "Finale"
 				},
 				{
-					"line": 345,
+					"line": 328,
 					"column": 0,
 					"label": "Galerie"
 				},
 				{
-					"line": 375,
+					"line": 359,
 					"column": 0,
 					"label": "Partner"
 				},
 				{
-					"line": 459,
+					"line": 444,
 					"column": 0,
 					"label": "Footer"
 				}
