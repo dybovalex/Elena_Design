@@ -217,3 +217,59 @@ document.querySelectorAll("#button-partner").forEach((btn) => {
     if (e.key === "ArrowRight") step(1);
   });
 })();
+
+// Button_up logic
+
+document.addEventListener("DOMContentLoaded", () => {
+  const buttonUp = document.querySelector(".button_up");
+  if (!buttonUp) return;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > 800) {
+      buttonUp.classList.add("is-visible");
+    } else {
+      buttonUp.classList.remove("is-visible");
+    }
+  };
+
+  window.addEventListener("scroll", toggleVisibility, { passive: true });
+  toggleVisibility();
+
+  const anchor = buttonUp.querySelector("a");
+  if (anchor) {
+    anchor.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+  // Progress ring logic
+  const progressCircle = document.querySelector(".progress-ring__progress");
+  const radius = 22; // From SVG r value
+  const circumference = 2 * Math.PI * radius;
+
+  if (progressCircle) {
+    progressCircle.style.strokeDasharray = `${circumference} ${circumference}`;
+    progressCircle.style.strokeDashoffset = `${circumference}`;
+
+    const setProgress = (progressRatio) => {
+      const offset =
+        circumference * (1 - Math.min(Math.max(progressRatio, 0), 1));
+      progressCircle.style.strokeDashoffset = `${offset}`;
+    };
+
+    const computeScrollRatio = () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight;
+      const winHeight = window.innerHeight;
+      const scrollable = Math.max(docHeight - winHeight, 1);
+      return scrollTop / scrollable;
+    };
+
+    const updateProgress = () => setProgress(computeScrollRatio());
+
+    window.addEventListener("scroll", updateProgress, { passive: true });
+    window.addEventListener("resize", updateProgress);
+    updateProgress();
+  }
+});

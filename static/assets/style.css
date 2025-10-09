@@ -133,6 +133,63 @@ ul {
   margin-bottom: 50px;
 }
 
+/* Button up */
+.button_up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--brand-slate);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.button_up img {
+  width: 40px;
+  height: 40px;
+}
+
+.button_up.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.button_up .progress-ring {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.progress-ring__bg {
+  fill: none;
+  stroke: rgba(64, 88, 109, 0.15);
+  stroke-width: 4;
+}
+
+.progress-ring__progress {
+  fill: none;
+  stroke: var(--brand-slate);
+  stroke-width: 4;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  stroke-dasharray: 0 1; /* will be overridden in JS */
+}
+
+.button_up a {
+  position: relative;
+  z-index: 1;
+}
+
 /* Header & Navigation */
 .nav-item {
   color: var(--accent-2);
@@ -265,8 +322,7 @@ ul {
 }
 .hero-wrapper img {
   margin-top: 50px;
-  width: 30%;
-  height: 30%;
+  width: 50%;
   object-fit: cover;
 }
 
@@ -329,7 +385,7 @@ ul {
 
 @media (max-width: 900px) {
   .hero-wrapper img {
-    width: 70vw;
+    width: 100dvw;
     max-width: 360px;
     height: auto;
     object-fit: cover;

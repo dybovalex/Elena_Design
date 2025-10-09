@@ -21,57 +21,62 @@
 				{
 					"line": 135,
 					"column": 0,
+					"label": ""
+				},
+				{
+					"line": 191,
+					"column": 0,
 					"label": "nav bar"
 				},
 				{
-					"line": 170,
+					"line": 226,
 					"column": 0,
 					"label": "burger button"
 				},
 				{
-					"line": 251,
+					"line": 307,
 					"column": 0,
 					"label": "Hero"
 				},
 				{
-					"line": 279,
+					"line": 334,
 					"column": 0,
 					"label": "Section: design coach"
 				},
 				{
-					"line": 535,
+					"line": 628,
 					"column": 0,
-					"label": "Partner"
+					"label": ""
 				},
 				{
-					"line": 605,
+					"line": 669,
 					"column": 0,
 					"label": "Galerie carousel"
 				},
 				{
-					"line": 708,
+					"line": 763,
 					"column": 0,
 					"label": "footer"
 				},
 				{
-					"line": 836,
+					"line": 891,
 					"column": 0,
 					"label": "impressum"
 				},
 				{
-					"line": 867,
+					"line": 959,
 					"column": 0,
-					"label": "ABG"
+					"label": "Datenschutz"
 				},
 				{
-					"line": 960,
+					"line": 1034,
 					"column": 0,
-					"label": "Referenz-Galerie"
+					"label": ""
 				},
 				{
-					"line": 1089,
+					"line": 1153,
 					"column": 0,
-					"label": "Partner"
+					"label": ""
 				}
 			]
 		},
@@ -79,44 +84,19 @@
 			"path": "index.html",
 			"bookmarks": [
 				{
-					"line": 36,
+					"line": 39,
 					"column": 0,
-					"label": "hero"
+					"label": ""
 				},
 				{
-					"line": 179,
+					"line": 75,
 					"column": 0,
-					"label": "Imago"
+					"label": ""
 				},
 				{
-					"line": 260,
+					"line": 92,
 					"column": 0,
-					"label": "Finale"
-				},
-				{
-					"line": 328,
-					"column": 0,
-					"label": "Galerie"
-				},
-				{
-					"line": 359,
-					"column": 0,
-					"label": "Partner"
-				},
-				{
-					"line": 444,
-					"column": 0,
-					"label": "Footer"
-				}
-			]
-		},
-		{
-			"path": "Impressum.html",
-			"bookmarks": [
-				{
-					"line": 56,
-					"column": 0,
-					"label": "Impressum"
+					"label": ""
 				}
 			]
 		}
