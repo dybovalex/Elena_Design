@@ -891,6 +891,22 @@ dd {
   }
 }
 
+/* Responsive visibility mobile number */
+.mobile-only {
+  display: none;
+}
+.desktop-only {
+  display: inline;
+}
+@media (max-width: 900px) {
+  .mobile-only {
+    display: inline;
+  }
+  .desktop-only {
+    display: none;
+  }
+}
+
 /* Impressum */
 
 #Impressum {
