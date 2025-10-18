@@ -142,19 +142,7 @@ window.addEventListener("resize", () => {
   update();
 })();
 
-// Navigate to Referenz-Galerie from buttons
-document.querySelectorAll("#button-galerie").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    window.location.href = "./referenz-galerie.html";
-  });
-});
-
-// Navigate to Partner from buttons
-document.querySelectorAll("#button-partner").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    window.location.href = "./partner.html";
-  });
-});
+// Links for Galerie and Partner are handled directly via anchor hrefs in HTML
 
 // Lightbox for Referenz-Galerie
 (() => {
