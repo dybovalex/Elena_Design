@@ -1,59 +1,65 @@
 // elfsight-appointment-redirect.js
 (function () {
-    const SUCCESS_MARKERS = [
-      'buchung bestätigt',           // DE (aus deinem Screenshot)
-      'termin gebucht',
-      'buchung erfolgreich',
-      'booking confirmed',           // EN fallback
-      'appointment booked'
-    ];
-  
-    function redirect() {
-      setTimeout(() => { window.location.href = '/danke.html'; }, 1200);
+  // 1) Hilfsfunktion: sicher umleiten
+  function redirectToThanks() {
+    setTimeout(() => {
+      window.location.href = "/danke.html";
+    }, 1200);
+  }
+
+  // 2) Optional: Debug einschalten, um zu sehen, was vom Iframe kommt
+  const DEBUG = false; // bei Bedarf auf true setzen
+
+  // 3) Auf Nachrichten (postMessage) aus Elfsight-Iframes hören
+  window.addEventListener("message", function (event) {
+    try {
+      // Nur Nachrichten aus Elfsight/Calendly/Booking-Widget weiter betrachten
+      const origin = String(event.origin || "").toLowerCase();
+      if (
+        !origin.includes("elfsight") &&
+        !origin.includes("booking") &&
+        !origin.includes("calend") // falls intern ein Kalenderdienst genutzt wird
+      ) {
+        if (DEBUG) console.log("[ELFSIGHT] Ignored message from", origin);
+        return;
+      }
+
+      const data = event.data;
+      if (DEBUG) console.log("[ELFSIGHT] message:", data);
+
+      // Daten können String oder Objekt sein – beide prüfen
+      const text =
+        typeof data === "string"
+          ? data.toLowerCase()
+          : JSON.stringify(data || {}).toLowerCase();
+
+      // Häufige Schlüsselwörter beim Abschluss
+      const markers = [
+        "buchung bestätigt",
+        "booking confirmed",
+        "appointment booked",
+        "booking_success",
+        "booking-completed",
+        "success",
+        "confirmed",
+        "Ihre Buchung ist bestätigt",
+      ];
+
+      if (markers.some((m) => text.includes(m))) {
+        if (DEBUG) console.log("[ELFSIGHT] success detected → redirect");
+        redirectToThanks();
+      }
+    } catch (e) {
+      if (DEBUG) console.warn("[ELFSIGHT] message parse error:", e);
     }
-  
-    function containsSuccess(node) {
-      if (!node) return false;
-      const text = (node.innerText || node.textContent || '').toLowerCase();
-      if (!text) return false;
-  
-      // Marker im Fließtext
-      if (SUCCESS_MARKERS.some(m => text.includes(m))) return true;
-  
-      // Häufige Erfolgs-/Status-Container
-      const hit = node.matches?.('[role="status"],[aria-live="polite"],.success,.confirmed,.thank-you')
-        || node.querySelector?.('[role="status"],[aria-live="polite"],.success,.confirmed,.thank-you');
-      return !!hit;
-    }
-  
-    function watch(root) {
-      if (containsSuccess(root)) return redirect();
-  
-      const obs = new MutationObserver(muts => {
-        for (const m of muts) {
-          for (const n of m.addedNodes || []) {
-            if (n.nodeType === 1 && containsSuccess(n)) {
-              obs.disconnect();
-              return redirect();
-            }
-          }
-        }
-      });
-      obs.observe(root, { childList: true, subtree: true });
-    }
-  
-    function waitForElfsight(tries = 80) {
-      // Versuche zuerst den Elfsight-Container, sonst fallback auf body
-      const widget = document.querySelector('[class^="elfsight-app-"], [class*=" elfsight-app-"]');
-      if (widget) return watch(widget);
-      if (tries <= 0) return watch(document.body);
-      setTimeout(() => waitForElfsight(tries - 1), 500);
-    }
-  
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', waitForElfsight);
-    } else {
-      waitForElfsight();
-    }
-  })();
-  
+  });
+
+  // 4) Fallback: wenn das Widget die URL hash/param ändert (selten), beobachten
+  window.addEventListener("hashchange", () => {
+    const h = (location.hash || "").toLowerCase();
+    if (h.includes("success") || h.includes("confirmed")) redirectToThanks();
+  });
+
+  // 5) Minimaler Sichtbarkeits-Ping fürs Debugging
+  if (DEBUG) console.log("[ELFSIGHT] redirect listener active");
+})();
