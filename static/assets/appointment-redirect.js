@@ -20,7 +20,7 @@
     if (DEBUG) console.log("[HOST] redirecting to /danke.html");
     setTimeout(() => {
       window.location.href = "/danke.html";
-    }, 5000); // 5 Sekunden Verzögerung
+    }, 2000); // 2 Sekunden Verzögerung
   };
 
   window.addEventListener("message", (event) => {
